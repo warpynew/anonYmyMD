@@ -303,7 +303,6 @@ def main() -> None:
         #raise SystemExit(1)
         if args.action == "encrypt":
             if args.names:
-                process_names_encrypt(load_key(), root.parent, args.dry_run)
                 logging.error("Chemin n'est pas un répertoire l'argument --names n'est pas valable: %s", root)
                 raise SystemExit(1)
             else:
@@ -311,7 +310,6 @@ def main() -> None:
                 exit(0)
         else:
             if args.names:
-                process_names_decrypt(load_key(), root.parent, args.dry_run)
                 logging.error("Chemin n'est pas un répertoire l'argument --names n'est pas valable: %s", root)
                 raise SystemExit(1)
             else:
