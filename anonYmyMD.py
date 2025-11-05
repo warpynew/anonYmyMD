@@ -45,7 +45,7 @@ TAG_SIZE = 16
 
 DEFAULT_IGNORE_DIRS = {".venv", ".git", "node_modules", "__pycache__"}
 
-DEFAULT_EXTS = {".md", ".png", ".jpg", ".jpeg"}
+DEFAULT_EXTS = {".md", ".png", ".jpg", ".jpeg", ".canvas", ".base"}
 
 # Clé par défaut (DEMO). Remplace par AES_KEY_HEX env var (64 hex chars) ou modifie ci-dessous.
 DEFAULT_KEY = b"change_me_use_env_var_for_real_32_bytes!!"[:32]  # 32 bytes (AES-256)

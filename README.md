@@ -36,7 +36,7 @@ Il est **fortement recommandé** d’exécuter anonYmyMD dans un environnement v
 1. **Cloner ou copier le projet :**
 
    ```bash
-   git clone https://github.com/warpynew/anonYmyMD.git
+   git clone https://github.com/<ton-utilisateur>/anonYmyMD.git
    cd anonYmyMD
    ```
 
@@ -86,7 +86,7 @@ $env:AES_KEY_HEX = "0123456789abcdef0123456789abcdef0123456789abcdef0123456789ab
 **Windows cmd**
 
 ```cmd
-setx AES_KEY_HEX=0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+set AES_KEY_HEX=0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
 ```
 
 **macOS / Linux**
@@ -180,6 +180,5 @@ Cet ordre est obligatoire pour éviter la perte d’extensions et garantir un d�
 * Sauvegardez vos clés dans un gestionnaire de secrets sécurisé.
 * En cas de perte de la clé, le déchiffrement est impossible.
 * Le mode AES-GCM assure la **confidentialité** et **l’intégrité** des données.
-
 
 ---
