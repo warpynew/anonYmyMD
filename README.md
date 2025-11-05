@@ -111,7 +111,7 @@ python anonYmyMD.py decrypt <chemin_du_dossier> [options]
 | Option                      | Description                                                                   |
 | :-------------------------- | :---------------------------------------------------------------------------- |
 | `--ext .md .png .jpg .jpeg` | Extensions ciblées (par défaut : `.md`, `.png`, `.jpg`, `.jpeg`)              |
-| `--names`                   | Active le chiffrement ou le déchiffrement des noms de fichiers et répertoires |
+| `--names` (directory only !)| Active le chiffrement ou le déchiffrement des noms de fichiers et répertoires |
 | `--backup`                  | Crée un fichier `.bak` avant d’écraser un contenu                             |
 | `--dry-run`                 | Simulation sans écriture sur le disque                                        |
 | `--verbose`                 | Active un mode de journalisation détaillée                                    |
