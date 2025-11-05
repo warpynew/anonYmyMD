@@ -294,12 +294,29 @@ def main() -> None:
     if not root.exists():
         logging.error("Chemin inexistant: %s", root)
         raise SystemExit(1)
-    if not root.is_dir():
-        logging.error("Chemin n'est pas un répertoire: %s", root)
-        raise SystemExit(1)
 
     key = load_key()
     exts = {e if e.startswith(".") else "." + e for e in args.ext}
+
+    if not root.is_dir():
+        #logging.error("Chemin n'est pas un répertoire: %s", root)
+        #raise SystemExit(1)
+        if args.action == "encrypt":
+            if args.names:
+                process_names_encrypt(load_key(), root.parent, args.dry_run)
+                logging.error("Chemin n'est pas un répertoire l'argument --names n'est pas valable: %s", root)
+                raise SystemExit(1)
+            else:
+                process_file_encrypt(load_key(), root, args.dry_run, args.backup)
+                exit(0)
+        else:
+            if args.names:
+                process_names_decrypt(load_key(), root.parent, args.dry_run)
+                logging.error("Chemin n'est pas un répertoire l'argument --names n'est pas valable: %s", root)
+                raise SystemExit(1)
+            else:
+                process_file_decrypt(load_key(), root, args.dry_run, args.backup)
+                exit(0)
 
     logging.info("Racine: %s", root.resolve())
     logging.info("Extensions: %s", ", ".join(sorted(exts)))
